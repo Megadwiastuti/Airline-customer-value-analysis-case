@@ -14,7 +14,7 @@ Melakukan segmentasi pelanggan penerbangan, menganalisis karakteristik kategori 
 
 **Feature yang tidak ada akan ditambahkan dalam feature engineering**
 #### Feature Engineering
-Dari feature LAST_FLIGHT_DATE, FIRST_FLIGHT_DATE, dan FLIGHT COUNT, dilakukan perhitungan untuk menentukan rata-rata penerbangan per tahun dengan output pada feature Flight_Count/Year
+Dari feature `LAST_FLIGHT_DATE, FIRST_FLIGHT_DATE, dan FLIGHT COUNT, dilakukan perhitungan untuk menentukan rata-rata penerbangan per tahun dengan output pada feature Flight_Count/Year`
 *	Dibuat feature Meeting_Time untuk menghitung jumlah bulan antara LOAD_TIME dan FPP_DATE
 *	Setelah feature engineering, drop feature yang tidak digunakan kembali, dan handling outlier, dilakukan standarisasi pada dataset sehingga data dapat siap untuk modelling
 
@@ -27,7 +27,7 @@ Berdasarkan hasil pengerjaan, didapatkan beberapa kesimpulan sebagai berikut:
 a.	Feature yang mempengaruhi dalam segmentasi pelanggan diantaranya yakni total jarak penerbangan, jarak waktu penerbangan terakhir ke pesanan penerbangan paling akhir, rata-rata diskon yang didapatkan pelanggan, durasi pelanggan menjadi member, dan rata-rata jumlah penerbangan per tahun.  
 b.	Berdasarkan cluster yang telah diidentifikasi (dapat dilihat di file Homework Solution - Clustering)
 Adapun penjelasan terhadap ke-4 cluster yang terbentuk adalah sebagai berikut:
-1.	Cluster 0 merupakan pelanggan yang telah mendaftar sebagai member cukup lama (rata-rata 81 bulan) dengan frekuensi terbang sedang (rata-rata 16.564 km) atau sering melakukan penerbangan jarak jauh mengingat jumlah penerbangan per tahunnya cenderung rendah (rata-rata 2 kali per tahun). 
-2.	Cluster 1 merupakan pelanggan baru (rata-rata 30 bulan) dengan frekuensi terbang tinggi (rata-rata 11 penerbangan per tahun), dengan penerbangan jarak jauh (rata-rata 22.258 km).
-3.	Cluster 2 merupakan pelanggan dengan durasi menjadi member, frekuensi terbang, dan jarak penerbangan sedang namun memiliki jarak waktu penerbangan terakhir ke pesanan penerbangan paling akhir rendah.
-4.	Cluster 3 merupakan pelanggan dengan durasi menjadi member, frekuensi terbang, dan jarak penerbangan sedang namun memiliki jarak waktu penerbangan terakhir ke pesanan penerbangan paling akhir tinggi.
+1.	`Cluster 0` merupakan pelanggan yang telah mendaftar sebagai member cukup lama (rata-rata 81 bulan) dengan frekuensi terbang sedang (rata-rata 16.564 km) atau sering melakukan penerbangan jarak jauh mengingat jumlah penerbangan per tahunnya cenderung rendah (rata-rata 2 kali per tahun). 
+2.	`Cluster 1` merupakan pelanggan baru (rata-rata 30 bulan) dengan frekuensi terbang tinggi (rata-rata 11 penerbangan per tahun), dengan penerbangan jarak jauh (rata-rata 22.258 km).
+3.	`Cluster 2` merupakan pelanggan dengan durasi menjadi member, frekuensi terbang, dan jarak penerbangan sedang namun memiliki jarak waktu penerbangan terakhir ke pesanan penerbangan paling akhir rendah.
+4.	`Cluster 3` merupakan pelanggan dengan durasi menjadi member, frekuensi terbang, dan jarak penerbangan sedang namun memiliki jarak waktu penerbangan terakhir ke pesanan penerbangan paling akhir tinggi.
