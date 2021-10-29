@@ -5,17 +5,18 @@ Airline-customer-value-analysis-case merupakan salah satu tugas kelompok metode 
 Melakukan segmentasi pelanggan penerbangan, menganalisis karakteristik kategori pelanggan yang berbeda, membandingkan nilai pelanggan dari kategori pelanggan yang berbeda, memberikan layanan yang dipersonalisasi untuk kategori pelanggan dengan nilai yang berbeda, dan merumuskan strategi pemasaran yang sesuai.
 
 ### Exploratory Data Analysis dan Preprocessing
-●	Berdasarkan missing values, dilakukan pengisian data pada feature AGE, SUM_YR_1, dan SUM_YR_2. Selain itu, dilakukan drop pada feature WORK_CITY, WORK_PROVINCE, WORK_COUNTRY dan GENDER
-●	Dari hasil heatmap dan referensi ebook diketahui bahwa fitur penting berdasarkan sumber yang dibaca, dipilih menggunakan model LRFMC dimana fitur yang digunakan untuk model ini adalah: load_time, ffp_date, last_to_end, flight_count, seg_km_sum, avg_discount
-●	Fitur yang nilai korelasinya rendah dan dianggap tidak berhubungan dalam penyelesaian masalah akan di drop dari dataset: MEMBER_NO, AGE, GENDER, EXCHANGE_COUNT, SUM_YR_1, SUM_YR_2, POINT_NOTFLIGHT, AVG_INTERVAL, MAX_INTERVAL 
-●	Distribusi pelanggan banyak terpusat di umur produktif (27 – 55 tahun). Hal ini bisa menjadi insight bahwa pelanggan melakukan perjalanan bisnis
-●	Pelanggan Loyal bisa dilihat dari pembagian flight count per tahun menjadi member
-●	Pelanggan lama bisa dilihat dari tanggal data diambil dikurang FFP join date
-Feature yang tidak ada akan ditambahkan dalam feature engineering
-Feature Engineering
-●	Dari feature LAST_FLIGHT_DATE, FIRST_FLIGHT_DATE, dan FLIGHT COUNT, dilakukan perhitungan untuk menentukan rata-rata penerbangan per tahun dengan output pada feature Flight_Count/Year
-●	Dibuat feature Meeting_Time untuk menghitung jumlah bulan antara LOAD_TIME dan FPP_DATE
-●	Setelah feature engineering, drop feature yang tidak digunakan kembali, dan handling outlier, dilakukan standarisasi pada dataset sehingga data dapat siap untuk modelling
+*	Berdasarkan missing values, dilakukan pengisian data pada feature AGE, SUM_YR_1, dan SUM_YR_2. Selain itu, dilakukan drop pada feature WORK_CITY, WORK_PROVINCE, WORK_COUNTRY dan GENDER
+*	Dari hasil heatmap dan referensi ebook diketahui bahwa fitur penting berdasarkan sumber yang dibaca, dipilih menggunakan model LRFMC dimana fitur yang digunakan untuk model ini adalah: `load_time, ffp_date, last_to_end, flight_count, seg_km_sum, avg_discount`
+*	Fitur yang nilai korelasinya rendah dan dianggap tidak berhubungan dalam penyelesaian masalah akan di drop dari dataset: MEMBER_NO, AGE, GENDER, EXCHANGE_COUNT, SUM_YR_1, SUM_YR_2, POINT_NOTFLIGHT, AVG_INTERVAL, MAX_INTERVAL 
+*	Distribusi pelanggan banyak terpusat di umur produktif (27 – 55 tahun). Hal ini bisa menjadi insight bahwa pelanggan melakukan perjalanan bisnis
+*	Pelanggan Loyal bisa dilihat dari pembagian flight count per tahun menjadi member
+*	Pelanggan lama bisa dilihat dari tanggal data diambil dikurang FFP join date
+
+**Feature yang tidak ada akan ditambahkan dalam feature engineering**
+#### Feature Engineering
+Dari feature LAST_FLIGHT_DATE, FIRST_FLIGHT_DATE, dan FLIGHT COUNT, dilakukan perhitungan untuk menentukan rata-rata penerbangan per tahun dengan output pada feature Flight_Count/Year
+*	Dibuat feature Meeting_Time untuk menghitung jumlah bulan antara LOAD_TIME dan FPP_DATE
+*	Setelah feature engineering, drop feature yang tidak digunakan kembali, dan handling outlier, dilakukan standarisasi pada dataset sehingga data dapat siap untuk modelling
 
 ### Modeling
 Melakukan clustering menggunakan k-means dimana berdasarkan elbow method digunakan jumlah cluster yaitu sebanyak 4 cluster.
